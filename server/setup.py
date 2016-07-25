@@ -12,13 +12,13 @@ from setuptools import setup, find_packages
 
 
 setup(
-    name="odin",
+    name='odin',
     version='0.1',
     description='ODIN detector server',
     url='https://github.com/timcnicholls/odin',
     author='Tim Nicholls',
     author_email='tim.nicholls@stfc.ac.uk',
-    packages=find_packages(),
+    packages=find_packages(exclude=['docs','sandbox', 'tests*']),
     install_requires=['nose>=1.3.7',
                       'coverage==4.1b2',
                       'codeclimate-test-reporter>=0.1.0',
