@@ -23,5 +23,6 @@ setup(
             'odin_server = odin.server:main',
         ],
     },
-    install_requires=required,
+    install_requires=['nose>=1.3.7', 'coverage==4.1b2', 'codeclimate-test-reporter>=0.1.0', 'pyzmq>=15.2.0', 'requests>=2.9.1', 'tornado>=4.3'],
 )
+
