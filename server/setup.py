@@ -18,6 +18,8 @@ setup(
     long_description='',
     url='https://github.com/timcnicholls/odin',
     author='Tim Nicholls',
+    py_version='',
+    platform='',
     author_email='tim.nicholls@stfc.ac.uk',
     license='Apache Software License, Version 2.0',
     classifiers=[
