@@ -1,14 +1,15 @@
 import sys
 from setuptools import setup, find_packages
 
-with open('requirements.txt') as f:
-    required = f.read().splitlines()
+#with open('requirements.txt') as f:
+#    required = f.read().splitlines()
 
-if required is None:
-    required = []
+#if required is None:
+#    required = []
 
-if sys.version_info[0] == 2:
-    required.append('futures>=3.0.0')
+#if sys.version_info[0] == 2:
+#    required.append('futures>=3.0.0')
+
 
 setup(
     name="odin",
@@ -24,10 +25,10 @@ setup(
                       'pyzmq>=15.2.0',
                       'requests>=2.9.1',
                       'tornado>=4.3'],
-    entry_points={
-        'console_scripts' : [
-            'odin_server = odin.server:main',
-        ],
-    },
+#    entry_points={
+#        'console_scripts' : [
+#            'odin_server = odin.server:main',
+#        ],
+#    },
 )
 
