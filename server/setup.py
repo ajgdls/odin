@@ -15,20 +15,38 @@ setup(
     name='odin',
     version='0.1',
     description='ODIN detector server',
+    long_description='',
     url='https://github.com/timcnicholls/odin',
     author='Tim Nicholls',
     author_email='tim.nicholls@stfc.ac.uk',
-    packages=find_packages(exclude=['docs','sandbox', 'tests*']),
+    license='Apache Software License, Version 2.0',
+    classifiers=[
+        # How mature is this project? Common values are
+        #   3 - Alpha
+        #   4 - Beta
+        #   5 - Production/Stable
+        'Development Status :: 3 - Alpha',
+        'Intended Audience :: Science/Research',
+        'Topic :: Scientific/Engineering',
+        'License :: OSI Approved :: Apache Software License',
+        'Programming Language :: Python :: 2',
+        'Programming Language :: Python :: 2.7',
+        'Programming Language :: Python :: 3',
+        'Programming Language :: Python :: 3.3',
+        'Programming Language :: Python :: 3.4',
+    ],
+    keywords='',
+    packages=find_packages(),
     install_requires=['nose>=1.3.7',
                       'coverage==4.1b2',
                       'codeclimate-test-reporter>=0.1.0',
                       'pyzmq>=15.2.0',
                       'requests>=2.9.1',
                       'tornado>=4.3'],
-#    entry_points={
-#        'console_scripts' : [
-#            'odin_server = odin.server:main',
-#        ],
-#    },
+    entry_points={
+        'console_scripts' : [
+            'odin_server = odin.server:main',
+        ],
+    },
 )
 
