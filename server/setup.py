@@ -10,21 +10,22 @@ from os import path
 #if required is None:
 #    required = []
 
-#if sys.version_info[0] == 2:
-#    required.append('futures>=3.0.0')
+
 rootdir = path.abspath(path.dirname(__file__))
 
-# Get the long description from the relevant file
-with open(path.join(rootdir, 'README.md'), encoding='utf-8') as f:
+with open(path.join(rootdir, 'requirements.txt'), encoding='utf-8') as f:
+    required = f.read().splitlines()
     long_description = f.read()
 
+if sys.version_info[0] == 2:
+    required.append('futures>=3.0.0')
 
 
 setup(
     name='odin',
     version='0.1',
     description='ODIN detector server',
-    long_description=long_description,
+    long_description='',
     url='https://github.com/timcnicholls/odin',
     author='Tim Nicholls',
     author_email='tim.nicholls@stfc.ac.uk',
@@ -56,7 +57,7 @@ setup(
 #                      'requests>=2.9.1',
 #                      'tornado>=4.3'],
     # run-time dependencies here. These will be installed by pip when the project is installed.
-    install_requires=['numpy', 'h5py', 'future', 'enum34>=1.0'],
+    install_requires=required,
 
     # Additional groups of dependencies (e.g. development dependencies). 
     # You can install these using the following syntax, for example:
